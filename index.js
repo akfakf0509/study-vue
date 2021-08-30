@@ -5,8 +5,14 @@ new Vue({
       name: "Hello World",
       age: 19,
     },
+    inputData: "hello",
+    type: "text",
+    link: "https://blog.naver.com/",
   },
   methods: {
+    getBlogLink(id) {
+      return this.link + id;
+    },
     nextYear(greeting) {
       return (
         greeting +
