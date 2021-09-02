@@ -1,7 +1,16 @@
 new Vue({
   el: "#app",
   data: {
-    text: "text",
+    message: "Welcome",
   },
-  methods: {},
+  methods: {
+    changeMessage() {
+      this.message = "Hello World";
+    },
+  },
+  computed: {
+    reversedMessage() {
+      return this.message.split("").reverse().join("");
+    },
+  },
 });

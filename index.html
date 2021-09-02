@@ -8,11 +8,10 @@
 </head>
 <body>
     <div id="app">
-        <form v-on:submit.prevent="submit">
-            <input type="text" v-model="text">
-            {{text}}
-            <button type="submit">Submit</button>
-        </form>
+        <button @click="changeMessage">Click</button>
+        {{reversedMessage}}
+        {{reversedMessage}}
+        {{reversedMessage}}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
