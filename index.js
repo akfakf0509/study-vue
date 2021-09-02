@@ -2,6 +2,7 @@ new Vue({
   el: "#app",
   data: {
     message: "Welcome",
+    updated: "No",
   },
   methods: {
     changeMessage() {
@@ -11,6 +12,12 @@ new Vue({
   computed: {
     reversedMessage() {
       return this.message.split("").reverse().join("");
+    },
+  },
+  watch: {
+    message(newVal, oldVal) {
+      console.log(newVal, oldVal);
+      this.updated = "Yes";
     },
   },
 });
