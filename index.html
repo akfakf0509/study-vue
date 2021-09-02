@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>study-react</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        {{message}}
-        <button @click="changeMessage">Click</button>
-        {{updated}}
+        <div :style="{color: red, fontSize: size}">Hello</div>
+        <button @click="update">Click</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="./index.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
