@@ -1,8 +1,15 @@
 new Vue({
   el: "#app",
   data: {
-    red: "red",
-    size: "30px",
+    number: 1,
+    show: false,
   },
-  methods: {},
+  methods: {
+    increaseNumber() {
+      this.number += 1;
+    },
+    toggle() {
+      this.show = !this.show;
+    },
+  },
 });

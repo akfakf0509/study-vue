@@ -10,8 +10,16 @@
 </head>
 <body>
     <div id="app">
-        <div :style="{color: red, fontSize: size}">Hello</div>
-        <button @click="update">Click</button>
+        <!-- <template v-if="number % 3 === 1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </template>
+        <div v-else-if="number % 3 === 2">Hi</div>
+        <div v-else>No</div> -->
+
+        <div v-show="show">Yes</div>
+        <button @click="toggle">Toggle</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
