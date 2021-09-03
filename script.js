@@ -1,15 +1,12 @@
 new Vue({
   el: "#app",
   data: {
-    number: 1,
-    show: false,
+    people: [
+      { name: "a", age: 20 },
+      { name: "b", age: 21 },
+      { name: "c", age: 22 },
+      { name: "d", age: 23 },
+    ],
   },
-  methods: {
-    increaseNumber() {
-      this.number += 1;
-    },
-    toggle() {
-      this.show = !this.show;
-    },
-  },
+  methods: {},
 });
