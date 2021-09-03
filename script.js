@@ -1,12 +1,19 @@
-new Vue({
+const app = new Vue({
   el: "#app",
-  data: {
-    people: [
-      { name: "a", age: 20 },
-      { name: "b", age: 21 },
-      { name: "c", age: 22 },
-      { name: "d", age: 23 },
-    ],
+  data: { name: "Hello" },
+  methods: {
+    changeText() {
+      app1.name = "Hello World";
+    },
   },
-  methods: {},
+});
+
+const app1 = new Vue({
+  el: "#app-1",
+  data: { name: "Hello1" },
+  methods: {
+    changeText() {
+      this.name = "Hello World1";
+    },
+  },
 });
