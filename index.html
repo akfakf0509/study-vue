@@ -10,16 +10,24 @@
 </head>
 <body>
     <div id="app">
-        <!-- <template v-if="number % 3 === 1">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-        </template>
-        <div v-else-if="number % 3 === 2">Hi</div>
-        <div v-else>No</div> -->
+        <div>
+            {{ people[0].name }} {{ people[0].age }}
+        </div>
+        <div>
+            {{ people[1].name }} {{ people[1].age }}
+        </div>
+        <div>
+            {{ people[2].name }} {{ people[2].age }}
+        </div>
+        <div>
+            {{ people[3].name }} {{ people[3].age }}
+        </div>
 
-        <div v-show="show">Yes</div>
-        <button @click="toggle">Toggle</button>
+        <hr>    
+
+        <div v-for="(person, index) in people" :key="person.name">
+            {{ person.name }} {{ person.age }} {{index}}
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
