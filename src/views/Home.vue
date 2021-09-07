@@ -1,27 +1,30 @@
 <template>
   <div>
     <h1>This is Home page</h1>
-    <Component1 title="Home Title" />
+    <form action="">
+      <InputField v-model="name" />
+      <button type="submit">Submit</button>
+    </form>
+    {{ name }}
   </div>
 </template>
 
 <script>
-import Component1 from "@/components/Component1.vue";
+import InputField from "../components/InputField.vue";
 
 export default {
   components: {
-    Component1,
+    InputField,
   },
   data() {
     return {
-      name: "Hello World",
+      name: "",
     };
   },
+  // methods: {
+  //   UpdateName(name) {
+  //     this.name = name;
+  //   },
+  // },
 };
 </script>
-
-<style scoped>
-h1 {
-  color: red;
-}
-</style>
