@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>{{ title }}</h1>
     <p>{{ name }}</p>
     <button @click="updateName">Change name</button>
   </div>
@@ -7,9 +8,19 @@
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String,
+      default: "Default Title",
+    },
+    name: {
+      type: String,
+      default: "Default name",
+    },
+  },
   data() {
     return {
-      name: "Hello World",
+      // name: "Hello World",
     };
   },
   methods: {
