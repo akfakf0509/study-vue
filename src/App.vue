@@ -1,14 +1,10 @@
 <template>
   <div id="app" class="container">
     <h1 class="text-center">Todo App</h1>
-    <CompeletedTodo :todos="todos" />
+    <CompeletedTodo />
     <AddTodo @add-todo="AddTodo" />
     <hr />
-    <TodoList
-      :todos="todos"
-      @toggle-checkbox="ToggleCheckBox"
-      @click-delete="DeleteTodo"
-    />
+    <TodoList @toggle-checkbox="ToggleCheckBox" @click-delete="DeleteTodo" />
     {{ todos }}
   </div>
 </template>
@@ -28,10 +24,10 @@ export default {
     return {
       todoText: "",
       maxId: 2,
-      todos: [
-        { id: 1, text: "buy a car", checked: false },
-        { id: 2, text: "play game", checked: false },
-      ],
+      // todos: [
+      //   { id: 1, text: "buy a car", checked: false },
+      //   { id: 2, text: "play game", checked: false },
+      // ],
     };
   },
   methods: {
