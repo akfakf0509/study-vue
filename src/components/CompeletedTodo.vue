@@ -6,7 +6,7 @@
 export default {
   computed: {
     NumberOfCompeletedTodo() {
-      return this.$store.getters.numberOfCompeletedTodo;
+      return this.$store.getters["todo/numberOfCompeletedTodo"];
     },
   },
 };

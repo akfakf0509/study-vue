@@ -12,7 +12,7 @@ import { mapState, mapActions } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["users"]),
+    ...mapState({ users: (state) => state.user.users }),
     // users() {
     //   return this.$store.state.users;
     // },
@@ -21,7 +21,7 @@ export default {
     // },
   },
   methods: {
-    ...mapActions(["GetUsers"]),
+    ...mapActions('user', ["GetUsers"]),
     // GetUsers() {
     //   this.$store.dispatch("GetUsers");
     // },
