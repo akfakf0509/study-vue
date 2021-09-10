@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(Vuex);
 
@@ -10,8 +11,12 @@ export default new Vuex.Store({
       { id: 1, text: "buy a car", checked: false },
       { id: 2, text: "play game", checked: false },
     ],
+    users: [],
   },
   mutations: {
+    GET_USERS(state, users) {
+      state.users = users;
+    },
     ADD_TODO(state, value) {
       state.maxId += 1;
       state.todos.push({
@@ -33,6 +38,27 @@ export default new Vuex.Store({
       });
     },
   },
-  actions: {},
+  actions: {
+    GetUsers({ commit }) {
+      axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
+        commit("GET_USERS", res.data);
+      });
+    },
+    AddTodo({ commit }, value) {
+      setTimeout(function() {
+        commit("ADD_TODO", value);
+      }, 500);
+    },
+    ToggleTodo({ commit }, payload) {
+      setTimeout(function() {
+        commit("TOGGLE_TODO", payload);
+      }, 500);
+    },
+    DeleteTodo({ commit }, id) {
+      setTimeout(function() {
+        commit("DELETE_TODO", id);
+      }, 500);
+    },
+  },
   getters: {},
 });

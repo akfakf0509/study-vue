@@ -28,14 +28,19 @@ export default {
       //   id: this.todo.id,
       //   checked: e.target.checked,
       // });
-      this.$store.commit("TOGGLE_TODO", {
+      // this.$store.commit("TOGGLE_TODO", {
+      //   id: this.todo.id,
+      //   checked: e.target.checked,
+      // });
+      this.$store.dispatch("ToggleTodo", {
         id: this.todo.id,
         checked: e.target.checked,
       });
     },
     ClickDelete() {
       // this.$emit("click-delete", this.todo.id);
-      this.$store.commit("DELETE_TODO", this.todo.id);
+      // this.$store.commit("DELETE_TODO", this.todo.id);
+      this.$store.dispatch("DeleteTodo", this.todo.id);
     },
   },
 };
